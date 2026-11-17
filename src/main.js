@@ -7,6 +7,7 @@ const products = [
     name: 'Wireless Headphones',
     price: '₹1,499',
     image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600',
+  link: 'https://link.amazon/B0fY3d86Y',
   },
   {
     id: 2,
@@ -20,13 +21,15 @@ const products = [
     name: 'Stylish Backpack',
     price: '₹899',
     image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600',
-  },
+  link: 'https://link.amazon/B0iv40pCO',
+   },
   {
     id: 4,
     name: 'Smartphone',
     price: '₹12,999',
     image: 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600',
-  }
+  link: 'https://link.amazon/B0ikXHt9m',
+}
 ]
 
 let wishlist = JSON.parse(localStorage.getItem('wishlist') || '[]')

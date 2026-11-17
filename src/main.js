@@ -13,6 +13,7 @@ const products = [
     name: 'Smart Watch',
     price: '₹1,999',
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600',
+  link: 'https://link.amazon/B09zaUh4m',
   },
   {
     id: 3,
@@ -88,7 +89,7 @@ function renderProducts(showWishlist = false) {
         </button>
         <h3>${product.name}</h3>
         <p>${product.price}</p>
-        <a href="#" class="buy-btn">Buy Now</a>
+        <a href="${product.link || '#'}" class="buy-btn" target="_blank" rel="noopener noreferrer">Buy Now</a>
       </article>
     `).join('')
     : '<p>No products found.</p>'
@@ -122,3 +123,15 @@ document.querySelector('#wishlistBtn').addEventListener('click', () => {
 })
  
 renderProducts()
+// Amazon Affiliate Disclosure
+const affiliateDisclosure = document.createElement("p");
+
+affiliateDisclosure.textContent =
+  "As an Amazon Associate I earn from qualifying purchases.";
+
+affiliateDisclosure.style.textAlign = "center";
+affiliateDisclosure.style.padding = "15px";
+affiliateDisclosure.style.fontSize = "13px";
+affiliateDisclosure.style.color = "#666";
+
+document.body.appendChild(affiliateDisclosure);
